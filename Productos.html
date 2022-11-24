@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/13a5708cc4.js" crossorigin="anonymous"></script>
+    <title>Productos</title>
+</head>
+<body class="bproductos">
+  <div class="head">
+
+    <div class="logo">
+        
+        <a href="index.html"><img href="index.html" src="/imgs/logo.png" alt="logo"></a> 
+    </div>
+
+<nav class="navbar">
+<input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+        <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+        <li><a href="Galeria.html">Galeria</a></li>
+        </ul>
+    </nav>
+
+</div>
+<h4>Nuestros productos</h4>
+<div class="container">
+
+    <div class="elementoCarousel fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="imgs/x5002.jpg" style="width:100%">
+        <div class="text">La Evloucion</div>
+    </div>
+
+    <div class="elementoCarousel fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="/imgs/1920.jpg" style="width:100%">
+        <div class="text">Nunca para</div>
+    </div>
+
+    <div class="elementoCarousel fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="imgs/31920.jpg" style="width:100%">
+        <div class="text"> Y siempre hay algo</div>
+    </div>
+
+    <div class="elementoCarousel fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="imgs/x5004.jpg" style="width:100%">
+        <div class="text">Para mejorar</div>
+    </div>
+
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+
+<div style="text-align:center">
+    <span class="dot" onclick="slideActual(1)"></span>
+    <span class="dot" onclick="slideActual(2)"></span>
+    <span class="dot" onclick="slideActual(3)"></span>
+    <span class="dot" onclick="slideActual(4)"></span>
+</div>
+
+<br>
+
+
+
+
+<script>
+    let indiceSlide = 1;
+    mostrarSlides(indiceSlide);
+
+    function plusSlides(numero) {
+        mostrarSlides(indiceSlide += numero);
+    }
+
+    function slideActual(numero) {
+        mostrarSlides(indiceSlide = numero);
+    }
+
+    function mostrarSlides(numero) {
+        let slides = document.getElementsByClassName("elementoCarousel");
+        let indicadores = document.getElementsByClassName("dot");
+
+        if (numero > slides.length) { indiceSlide = 1 }
+        if (numero < 1) { indiceSlide = slides.length }
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < indicadores.length; i++) {
+            indicadores[i].className = indicadores[i].className.replace(" active", "");
+        }
+
+        slides[indiceSlide - 1].style.display = "block";
+        indicadores[indiceSlide - 1].className += " active";
+    } 
+
+    
+</script>
+<div class="grid-container">
+    <div
+      class="grid-item tall"
+      style="background-image: url('https://media.digikey.com/Photos/RobotShop/MFG_RB-RBO-96.jpg')"
+    ></div>
+    <div
+      class="grid-item"
+      style="
+        background-image: url('https://www.robotshop.com/media/catalog/product/cache/image/1350x/9df78eab33525d08d6e5fb8d27136e95/r/o/robotshop-m100rak-v4-modular-robotic-arm-kit-no-electronics_1.jpg');
+      "
+    ></div>
+
+    <div
+      class="grid-item wide"
+      style="
+        background-image: url('https://media.digikey.com/Photos/RobotShop/MFG_RB-LYN-882.jpg');
+      "
+    ></div>
+    <div
+      class="grid-item"
+      style="
+        background-image: url('https://www.robotshop.com/media/catalog/product/cache/image/400x400/9df78eab33525d08d6e5fb8d27136e95/i/p/ipal-companion-robot.jpg');
+      "
+    ></div>
+    <div
+      class="grid-item"
+      style="
+        background-image: url('https://www.robotshop.com/media/catalog/product/cache/image/1350x/9df78eab33525d08d6e5fb8d27136e95/s/m/smart-dual-lidar-robot-base-mobile-platform.jpg');
+      "
+    ></div>
+    <div
+      class="grid-item"
+      style="
+        background-image: url('https://mma.prnewswire.com/media/1155673/lavviebot_s_automatic_litter_box.jpg');
+      "
+    ></div>
+    <div
+      class="grid-item"
+      style="
+        background-image: url('https://www.robotshop.com/media/catalog/product/cache/image/1350x/9df78eab33525d08d6e5fb8d27136e95/c/l/clementoni-walking-bot-french_1.jpg');
+      "
+    ></div>
+    <div
+      class="grid-item"
+      style="background-image: url('https://www.robotshop.com/media/catalog/product/cache/image/1350x/9df78eab33525d08d6e5fb8d27136e95/w/o/wowwee-mip-arcade-2_1.jpg')"
+    ></div>
+    <div
+      class="grid-item tall wide"
+      style="
+        background-image: url('https://www.robotshop.com/media/catalog/product/cache/image/1350x/9df78eab33525d08d6e5fb8d27136e95/l/y/lynxmotion-smart-servo-lss---articulated-robotic-arm-assembled-5.jpg');
+      "
+    ></div>
+    <div
+      class="grid-item"
+      style="
+        background-image: url('https://www.robotshop.com/media/catalog/product/cache/image/900x900/9df78eab33525d08d6e5fb8d27136e95/s/t/st-robotics-r12-5-axis-articulated-robot-arm_1.jpg');
+      "
+    ></div>
+    <div
+      class="grid-item"
+      style="
+        background-image: url('https://www.robotshop.com/media/catalog/product/cache/image/1350x/9df78eab33525d08d6e5fb8d27136e95/y/o/youbionic-robot-left-hand-2019-3_2.jpg');
+      "
+    ></div>
+    <div
+      class="grid-item"
+      style="
+        background-image: url('https://www.robotshop.com/media/catalog/product/cache/image/900x900/9df78eab33525d08d6e5fb8d27136e95/n/i/niryo-ned2-6-axis-robot-arm-1.jpg');
+      "
+    ></div>
+    <div
+      class="grid-item"
+      style="
+        background-image: url('https://www.robotshop.com/media/catalog/product/cache/image/1350x/9df78eab33525d08d6e5fb8d27136e95/d/o/dobot-m1-pro-advanced-scara-cobot.jpg');
+      "
+    ></div>
+    <div
+      class="grid-item"
+      style="
+        background-image: url('https://www.robotshop.com/media/catalog/product/cache/image/1350x/9df78eab33525d08d6e5fb8d27136e95/n/i/niryo-conveyor-belt-v2-ned2-2.jpg');
+      "
+    ></div>
+    <div
+      class="grid-item"
+      style="
+        background-image: url('https://www.robotshop.com/media/catalog/product/cache/image/1350x/9df78eab33525d08d6e5fb8d27136e95/r/b/rb-vogui-2wd-advanced-mobile-research-platform.jpg');
+      "
+    ></div>
+  </div>
+</div>
+</body>
+</html>
